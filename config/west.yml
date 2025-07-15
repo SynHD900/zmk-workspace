@@ -32,9 +32,16 @@ manifest:
       remote: zmkfirmware
       import: app/west.yml
 
+    - name: totem 
+      url: https://github.com/GEIGEIGEIST/zmk-config-totem
+      revision: master
+      path: modules/totem
+
     - name: eyelash_corne
       url: https://github.com/a741725193/zmk-new_corne
       revision: main
+      path: modules/eyelash_corne
+
     # ZMK modules
     - name: zmk-adaptive-key
       path: modules/zmk/adaptive-key
