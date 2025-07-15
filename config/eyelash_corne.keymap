@@ -7,25 +7,16 @@
 // #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
 
-// #define ZMK_BASE_LAYER(name, LT, RT, LM, RM, LB, RB, LH, RH)                   \
-//     ZMK_LAYER(                                                                 \
-//         name,                                                                  \
-//          &none LT             &none        RT &none                                                         \
-//          &none LM       &none &none & none RM &none                                                         \
-//          &none LB &none       &none        RB &none                                                         \
-//                LH                          RH                                             \
-//     )
-
 #define ZMK_BASE_LAYER(name, LT, RT, LM, RM, LB, RB, LH, RH)                   \
     ZMK_LAYER(                                                                 \
         name,                                                                  \
-         &none LT       RT &none                                                         \
-         &none LM       RM &none                                                         \
-         &none LB       RB &none                                                         \
+         &none LT                     RT &none                                                         \
+         &none LM       &none &none &none RM &none                                                         \
+         &none LB &none       &none        RB &none                                                         \
                LH                          RH                                             \
     )
 
-#include "eyelash_keys.dtsi"
+#include "zmk-helpers/key-labels/eyelash42.h"
 #include "base.keymap"
 
 &mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
